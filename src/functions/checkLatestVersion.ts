@@ -1,6 +1,7 @@
 import packageJSON from '../package.json'
+import { yellowFont, redFont } from '../fonts'
 
-const fetchLatest = (yellowFont: string, redFont: string) => {
+const fetchLatest = () => {
     fetch("https://registry.npmjs.org/swyft-discord-bot")
         .then((res) => res.json())
         .then((data) => {

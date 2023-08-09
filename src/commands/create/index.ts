@@ -1,7 +1,7 @@
 import { Args, Command, Flags } from '@oclif/core'
 import * as fs from 'fs';
 import * as path from 'path'; // Import the 'path' module
-import { exec } from 'child_process';
+import { redFont, yellowFont, greenFont } from '../../fonts';
 import indexFile from '../../files/indexFile';
 import packageJsonFile from '../../files/packageJsonFile';
 import fetchLatest from '../../functions/checkLatestVersion';
@@ -28,10 +28,6 @@ export default class Create extends Command {
 
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Create)
-
-    const greenFont = '\x1b[32m%s\x1b[0m'
-    const redFont = '\x1b[31m%s\x1b[0m'
-    const yellowFont = '\x1b[33m%s\x1b[0m'
 
     if (args.name.includes(" ")) return console.error(redFont, "Name cannot include spaces.")
 
@@ -63,7 +59,7 @@ export default class Create extends Command {
 
     const indexContent = indexFile(flags)
 
-    fetchLatest(yellowFont, redFont)
+    fetchLatest()
 
     WriteToFile(indexFilePath, indexContent, (err) => {
       console.error(redFont, 'Error writing to a file:', err);
