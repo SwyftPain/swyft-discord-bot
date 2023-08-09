@@ -1,6 +1,6 @@
 {
   "name": "swyft-discord-bot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Create a discord bot in specified programming language",
   "author": "SwyftPain",
   "bin": {
