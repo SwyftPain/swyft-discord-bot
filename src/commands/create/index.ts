@@ -19,7 +19,7 @@ export default class Create extends Command {
     language: Flags.string({ char: 'l', description: 'What language do you want your bot to be written in?', required: true, options: ["javascript", "typescript"], aliases: ["l"] }),
     token: Flags.string({ char: 't', description: 'Your bot token', required: true, aliases: ["t"] }),
     prefix: Flags.string({ char: 'p', description: 'Your bot prefix', required: true, aliases: ["p"] }),
-    dir: Flags.string({ char: 'o', description: 'The directory of your bot', required: false, aliases: ["d", "o"] }),
+    dir: Flags.string({ char: 'o', description: 'The directory of your bot', required: false, aliases: ["d", "o", "output"] }),
   }
 
   static args = {

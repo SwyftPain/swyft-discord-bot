@@ -8,7 +8,7 @@
 + Next argument is ``--language`` or ``--l`` which allows you to specify a programming language, currently only ``javascript`` and ``typescript``!
 + Next argument is ``--token`` or ``--t`` which allows you to specify your bot token that you got from discord developer portal.
 + Next argument is ``--prefix`` or ``--p`` which allows you to specify which prefix you want your bot commands to have.
-+ Lastly, we have ``--dir`` or ``--d`` or ``--o`` which allows you to specify the directory where you want your bot boilerplate to be created.
++ Lastly, we have ``--dir`` or ``--d`` or ``--o`` or ``--output`` which allows you to specify the directory where you want your bot boilerplate to be created.
 
 The command and name must be in order so:
 ``npx swyft-discord-bot create name-of-the-bot``
@@ -29,3 +29,9 @@ and you ran the same command again, the line in that file will become:
 ``texttext``
 
 So this command line tool is for one usage only on a single directory.
+
+TODO:
+
+- [ ] Add command handler as option, optional (not done)
+- [ ] Add more programming languages (not done)
+- [ ] Make repeating the command update/overwrite instead of append to the file (not done)
